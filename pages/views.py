@@ -4,7 +4,7 @@ from datetime import datetime
 def index(request):
     context = {
         'first_name': 'zyad',
-        'last_name': 'astal',
+        'last_name': 'alastal',
         'student_id': 120210866,
         'address': 'gaza palestine',
         'email': 'zastal@students.iugaza.edu.ps',
