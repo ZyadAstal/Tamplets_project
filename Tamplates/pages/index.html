@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 40px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            width: 500px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .info p {
+            font-size: 1.05rem;
+            margin: 8px 0;
+        }
+        span {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Student Information</h2>
+    <div class="info">
+        <p><span>Full Name:</span>
+            {{ first_name|capfirst|add:" " }}{{ last_name }}
+        </p>
+
+        <p><span>Student ID:</span>
+            {{ student_id|stringformat:"s" }}
+        </p>
+
+        <p><span>Address:</span>
+            {{ address|upper }}
+        </p>
+
+        <p><span>Email:</span>
+            {{ email|default:"No Email Provided" }}
+        </p>
+
+        <p><span>Date of Birth:</span>
+            {{ birth_date|timesince }} ago
+        </p>
+    </div>
+</div>
+</body>
+</html>
